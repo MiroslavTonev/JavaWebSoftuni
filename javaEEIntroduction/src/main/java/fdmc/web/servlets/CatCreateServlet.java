@@ -39,7 +39,7 @@ public class CatCreateServlet extends HttpServlet{
 		cat.setColor(req.getParameter("color"));
 		cat.setAge(Integer.parseInt(req.getParameter("age")));
 		
-		if(req.getSession().getAttribute("name") == null) {
+		if(req.getSession().getAttribute("cats") == null) {
 			req.getSession().setAttribute("cats", new LinkedHashMap<>());
 		}
 		
